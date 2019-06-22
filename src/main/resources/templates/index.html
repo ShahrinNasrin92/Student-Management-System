@@ -2,12 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="ISO-8859-1">
-<title>Student Information </title>
+<title>Student Information</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 
+
 	<div align="center">
-		<table border="2">
+		<h1>Student Data</h1>
+		<div class="row" style="margin-top: 50px;">
+
+			<div align="center" class="col-md-12">
+				<a href="create" class="btn btn-info">Create a student</a>
+			</div>
+		</div>
+		<table border="2" colspan="12">
 			<thread>
 
 			<tr>
@@ -15,7 +26,7 @@
 				<th>Student Name</th>
 				<th>Student Cgpa</th>
 				<th>Student Gender</th>
-				<th> Phone</th>
+				<th>Phone</th>
 				<th>Student Email</th>
 				<th>Student Country</th>
 				<th>Student Dob</th>
@@ -27,11 +38,16 @@
 					<td th:text="${student.Id}">Student ID</td>
 					<td th:text="${student.Name}">Student Name</td>
 					<td th:text="${student.Cgpa}">Student Cgpa</td>
-					<td th:text="${student.Gender}">Student Gender</td>					
+					<td th:text="${student.Gender}">Student Gender</td>
 					<td th:text="${student.Phone}">Phone</td>
 					<td th:text="${student.Email}">Student Email</td>
 					<td th:text="${student.Country}">Student Country</td>
 					<td th:text="${student.Dob}">Student Dob</td>
+					<td><a th:href="@{'/edit/' +${student.Id}}"
+						class="btn btn-info"><i class="far fa-edit"></i></a></td>
+					<td><a th:href="@{'/delete/' +${student.Id}}"
+						class="btn btn-danger"><i class="fas fa-trash-alt"></i></a></td>
+
 				</tr>
 
 			</tbody>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create Student</title>
+
+
+<script src='../http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+</head>
+<body>
+	<div align="center">
+		<h1>Create a new student</h1>
+		</br>
+		<form action="#" th:action="@/save" th:object="${student}"
+			method="post">
+			<table border="0" cellpadding="12">
+				<tr>
+					<td>Student Name:</td>
+					<td><input type="text" th:field="*{Student Name}" /></td>
+				</tr>
+				<tr>
+					<td>Student Cgpa:</td>
+					<td><input type="text" th:field="*{Student Cgpa}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Gender:</td>
+					<td><input type="text" th:field="*{Student Gender}" /></td>
+				</tr>
+
+				<tr>
+					<td>Phone:</td>
+					<td><input type="text" th:field="*{Phone}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Email:</td>
+					<td><input type="text" th:field="*{Student Email}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Country:</td>
+					<td><input type="text" th:field="*{Student Country}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Dob:</td>
+					<td><input type="text" th:field="*{Student Dob}" /></td>
+				</tr>
+			</table>
+
+		</form>
+	</div>
+</body>
+</html>

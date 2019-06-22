@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update data</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Update Student Info</h1>
+		</br>
+		<form action="#" th:action="@/edit" th:object="${student}"
+			method="post">
+			<table border="0" cellpadding="12">
+
+				<tr>
+					<td>Student Id:</td>
+					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Name:</td>
+					<td><input type="text" th:field="*{Student Name}" /></td>
+				</tr>
+				<tr>
+					<td>Student Cgpa:</td>
+					<td><input type="text" th:field="*{Student Cgpa}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Gender:</td>
+					<td><input type="text" th:field="*{Student Gender}" /></td>
+				</tr>
+
+				<tr>
+					<td>Phone:</td>
+					<td><input type="text" th:field="*{Phone}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Email:</td>
+					<td><input type="text" th:field="*{Student Email}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Country:</td>
+					<td><input type="text" th:field="*{Student Country}" /></td>
+				</tr>
+
+				<tr>
+					<td>Student Dob:</td>
+					<td><input type="text" th:field="*{Student Dob}" /></td>
+				</tr>
+			</table>
+
+		</form>
+	</div>
+</body>
+</html>
